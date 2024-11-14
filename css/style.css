@@ -1,0 +1,570 @@
+/********** Template CSS **********/
+:root {
+    --primary: #6244C5;
+    --secondary: #110c02;
+    --light: #FAFAFB;
+    --dark: #12141D;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.my-6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.py-6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* Navbar Styling */
+
+/* General Navbar Styles */
+.navbar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #141410;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #000;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #161511;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-dark {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-dark:hover {
+    background-color: #444;
+    border-color: #444;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-dark::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+    bottom: -8px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-dark:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    /* Navbar for tablets */
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Navbar for mobile devices */
+    .navbar {
+        padding: 10px;
+        position: relative; /* Ensures proper positioning */
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100%; /* Ensures proper alignment */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .btn-dark {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+
+/* 
+Header-strt */
+/* Particle Animation */
+.particle-container {
+    overflow: hidden;
+}
+.particle {
+    position: absolute;
+    background-color: rgba(5, 4, 4, 0.3);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: particleMove 15s infinite linear;
+}
+.particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.particle:nth-child(2) { top: 40%; left: 70%; animation-delay: 3s; }
+.particle:nth-child(3) { top: 60%; left: 30%; animation-delay: 6s; }
+.particle:nth-child(4) { top: 80%; left: 80%; animation-delay: 9s; }
+.particle:nth-child(5) { top: 20%; left: 50%; animation-delay: 12s; }
+
+@keyframes particleMove {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    100% { transform: translateY(-120px) translateX(60px); opacity: 0; }
+}
+
+/* Fade-in Effect for Text */
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Effect for Image */
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Pulse Effect for Image */
+@keyframes pulseEffect {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Button Hover Effects */
+.btn-light:hover {
+    background-color: #0b1d2e;
+    color: #fff !important;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+    
+}
+
+
+/* Image Hover Effect */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+}
+/* 
+end */
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+/* 
+About us */
+
+/* <!-- CSS Animations and Image Container Styling --> */
+
+@keyframes floatShape {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(10px, -10px); }
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Zoom In and Out Animation for the Image */
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Professional Rounded Rectangle Container with Increased Size */
+.image-container {
+    position: relative;
+    width: 95%;
+    max-width: 450px; /* Increased width */
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6c757d 50%, #ffffff 50%); /* Professional Gradient */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Soft rounded corners for the image */
+    animation: zoomInOut 4s ease-in-out infinite; /* Zoom effect only */
+}
+/* 
+end */
+/* 
+skills */
+
+    /* Basic styles */
+    .skill {
+        padding: 15px;
+        margin: 10px 0;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: transform 0.3s ease;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .progress-bar {
+        transition: width 1.5s ease-in-out;
+    }
+
+    /* Left-to-right and right-to-left animations for skill rows */
+    .animate-left {
+        animation-name: slideInLeft;
+    }
+
+    .animate-right {
+        animation-name: slideInRight;
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Animation for filling each progress bar */
+    .progress-animate-left {
+        animation: fillLeft 1.5s ease forwards;
+    }
+
+    .progress-animate-right {
+        animation: fillRight 1.5s ease forwards;
+    }
+
+    @keyframes fillLeft {
+        from {
+            width: 0;
+        }
+        to {
+            width: var(--width);
+        }
+    }
+
+    @keyframes fillRight {
+        from {
+            width: 0;
+            transform-origin: right;
+        }
+        to {
+            width: var(--width);
+            transform-origin: right;
+        }
+    }
+
+    /* Setting width for each progress bar */
+    .progress-bar[style*="width: 95%"] { --width: 95%; }
+    .progress-bar[style*="width: 85%"] { --width: 85%; }
+    .progress-bar[style*="width: 50%"] { --width: 50%; }
+    .progress-bar[style*="width: 60%"] { --width: 60%; }
+    .progress-bar[style*="width: 90%"] { --width: 90%; }
+
+
+/* 
+end */
+
+/* Unique Service Card Styling */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    border: 2px solid #f0f0f0;
+    background-color: #fff; /* Ensure a clean white background for the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Initial light shadow */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+/* Hover Effect: Scaling and Shadow */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    border-radius: 15px;  /* Rounded corners on hover */
+    border-color: #555; /* Darker border color on hover */
+}
+
+/* Icon Styling */
+.service-card .bg-icon i {
+    color: #333; /* Dark gray for icons */
+    transition: color 0.3s ease;
+}
+
+/* Change Icon Color on Hover */
+.service-card:hover .bg-icon i {
+    color: #333;  /* Keeping the icon color dark on hover */
+}
+
+/* Title and Description Styling */
+.service-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333; /* Dark gray for title */
+    transition: color 0.3s ease;
+}
+
+.service-card h6 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555; /* Dark gray color for subtitle */
+    margin-bottom: 1rem;
+}
+
+/* Make the $ amount Bold */
+.service-card h6 span {
+    font-weight: 700; /* Bold styling for the dollar amount */
+    color: #333; /* Dark color for the price */
+}
+
+/* Description Styling */
+.service-card span {
+    font-size: 1rem;
+    color: #666; /* Medium dark gray for description */
+    line-height: 1.6;
+}
+
+/* Box Shadow on the Container */
+.service-item {
+    padding: 30px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    background-color: #fff; /* Ensure card background is white */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow around the card */
+}
+
+/* Button Styling */
+.btn-dark {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #444; /* Slightly lighter dark color */
+    border-color: #444;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .service-item {
+        padding: 20px;
+    }
+    
+    .service-card {
+        margin-bottom: 20px;
+    }
+}
+/* 
+end */
+
+/*** Project Portfolio ***/
+
+    .project-item:hover {
+        transform: translateY(-10px);
+    }
+    .project-overlay {
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .project-item:hover .project-overlay {
+        opacity: 1;
+    }
+
+
+     /* Default Footer Style */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10; /* Ensures it appears above other content */
+}
+
+/* Body Padding for Footer */
+body {
+    padding-bottom: 60px; /* Adjust for footer height */
+}
+
+/* Footer Text */
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Ensure Footer Links are Visible */
+footer a {
+    color: #007bff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    footer {
+        position: fixed; /* Keep fixed at bottom */
+        bottom: 0;
+    }
+    body {
+        padding-bottom: 60px; /* Space for footer visibility */
+    }
+}
+    /* Back to Top Button styling */
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
